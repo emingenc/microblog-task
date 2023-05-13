@@ -4,13 +4,10 @@
     <h1>You're doing it!</h1>
     <br>
     <table class="table table-hover">
-        {% for i in range(5) %}
-        <tr>
-            <td>
-                <br>
-                <span id="post{{ i }}">{{ _('This is blog post number {}').format(i+1) }}</span>
-            </td>
-        </tr>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.body }}</td>
+            </tr>
         {% endfor %}
     </table>
     <nav aria-label="...">
